@@ -1,0 +1,12 @@
+<svg width="480" height="600" viewBox="0 0 480 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="480" height="600" rx="36" fill="#0C0F14"/>
+  <rect x="24" y="24" width="432" height="552" rx="28" fill="#131A26" stroke="#313A49" stroke-width="2"/>
+  <circle cx="240" cy="210" r="108" fill="#253040"/>
+  <circle cx="240" cy="210" r="78" fill="#303B4C"/>
+  <rect x="120" y="340" width="240" height="28" rx="14" fill="#303B4C"/>
+  <rect x="150" y="388" width="180" height="18" rx="9" fill="#202A38"/>
+  <rect x="90" y="450" width="300" height="86" rx="18" fill="#0F172A"/>
+  <path d="M60 120h90" stroke="#FF4D6D" stroke-width="6"/>
+  <path d="M320 500h100" stroke="#54A6FF" stroke-width="6"/>
+  <text x="40" y="560" fill="#9AA9BD" font-family="Sora, sans-serif" font-size="18">Retrato mock</text>
+</svg>

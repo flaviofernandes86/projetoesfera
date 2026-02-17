@@ -1,0 +1,21 @@
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="800" fill="none"/>
+  <g stroke="#0C1422" stroke-opacity="0.12" stroke-width="1">
+    <circle cx="400" cy="400" r="360"/>
+    <circle cx="400" cy="400" r="300"/>
+    <circle cx="400" cy="400" r="240"/>
+    <circle cx="400" cy="400" r="180"/>
+    <circle cx="400" cy="400" r="120"/>
+    <circle cx="400" cy="400" r="60"/>
+  </g>
+  <g stroke="#0C1422" stroke-opacity="0.08" stroke-width="1">
+    <line x1="400" y1="40" x2="400" y2="760"/>
+    <line x1="40" y1="400" x2="760" y2="400"/>
+    <line x1="120" y1="120" x2="680" y2="680"/>
+    <line x1="680" y1="120" x2="120" y2="680"/>
+  </g>
+  <g stroke="#1B9AD7" stroke-opacity="0.18" stroke-width="1">
+    <circle cx="400" cy="400" r="20"/>
+    <circle cx="400" cy="400" r="12"/>
+  </g>
+</svg>
