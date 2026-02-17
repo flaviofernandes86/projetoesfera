@@ -71,22 +71,6 @@
   background: #f1f4fa;
 }
 
-.archive-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 10px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(12, 20, 34, 0.18);
-  background: #f5f7fb;
-  color: #1e2b41;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 .profile-links {
   margin-top: 14px;
   display: flex;
