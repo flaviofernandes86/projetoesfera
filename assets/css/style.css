@@ -756,7 +756,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 10px;
+  border-radius: 18px;
 }
 
 .logo-grid > img {
@@ -801,12 +801,8 @@ img {
 }
 
 .logo-grid.large .partner-logo {
-  width: 200px;
-  height: 200px;
-}
-
-.logo-grid.large {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+  width: 170px;
+  height: 170px;
 }
 
 @media (max-width: 520px) {
