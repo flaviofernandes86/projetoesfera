@@ -727,20 +727,22 @@ img {
 .logo-grid {
   margin-top: 28px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 170px));
   gap: 18px;
-  align-items: center;
+  align-items: start;
+  justify-content: start;
 }
 
 .partner-logo {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  width: 170px;
+  height: 170px;
   background: #ffffff;
   border: 1px solid var(--line);
   border-radius: 18px;
   padding: 12px;
   display: grid;
   place-items: center;
+  overflow: hidden;
   box-shadow: var(--shadow);
   transition: transform 0.25s ease, border-color 0.25s ease;
 }
@@ -758,8 +760,8 @@ img {
 }
 
 .logo-grid > img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  width: 170px;
+  height: 170px;
   background: #ffffff;
   border: 1px solid var(--line);
   border-radius: 18px;
@@ -794,11 +796,33 @@ img {
 }
 
 .logo-grid.small .partner-logo {
-  max-width: 170px;
+  width: 170px;
+  height: 170px;
 }
 
 .logo-grid.large .partner-logo {
-  max-width: 200px;
+  width: 200px;
+  height: 200px;
+}
+
+.logo-grid.large {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+}
+
+@media (max-width: 520px) {
+  .logo-grid,
+  .logo-grid.large {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+  }
+
+  .partner-logo,
+  .logo-grid.small .partner-logo,
+  .logo-grid.large .partner-logo,
+  .logo-grid > img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
 }
 
 .team-card {
