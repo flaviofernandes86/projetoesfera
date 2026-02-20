@@ -727,7 +727,7 @@ img {
 .logo-grid {
   margin-top: 28px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 170px));
+  grid-template-columns: repeat(2, minmax(140px, 170px));
   gap: 18px;
   align-items: start;
   justify-content: center;
