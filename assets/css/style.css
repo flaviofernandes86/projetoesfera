@@ -1047,9 +1047,16 @@ img {
     display: none;
   }
 
+  .hero-visual {
+    min-height: auto;
+    flex-direction: column;
+    gap: 18px;
+  }
+
   .hero-panel {
     position: static;
     margin-top: 24px;
+    width: min(340px, 92vw);
   }
 
   .manifesto {
