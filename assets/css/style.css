@@ -1044,7 +1044,9 @@ img {
 
 @media (max-width: 1100px) {
   .hero {
+    min-height: auto;
     overflow: visible;
+    padding: 132px 0 44px;
   }
 
   .hero-grid {
@@ -1060,6 +1062,11 @@ img {
     min-height: auto;
     flex-direction: column;
     gap: 18px;
+  }
+
+  #sphere-canvas {
+    width: min(340px, 82vw);
+    height: min(340px, 82vw);
   }
 
   .hero-panel {
