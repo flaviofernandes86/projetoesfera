@@ -132,8 +132,13 @@
   margin-top: 12px;
   background: none;
   border: none;
-  color: #1b9ad7;
+  color: #2e6bff;
   font-weight: 600;
   cursor: pointer;
   padding: 0;
+}
+
+.card-link:hover,
+.card-link:focus-visible {
+  color: #1b3faf;
 }
