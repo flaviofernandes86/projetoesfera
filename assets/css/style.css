@@ -303,9 +303,24 @@ img {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 48px;
+  grid-template-columns: minmax(460px, 1.08fr) 1px minmax(320px, 0.92fr);
+  gap: 36px;
   align-items: center;
+}
+
+.hero-divider {
+  width: 1px;
+  height: min(520px, 72vh);
+  justify-self: center;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.42) 12%,
+    rgba(46, 107, 255, 0.38) 46%,
+    rgba(255, 255, 255, 0.34) 78%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  box-shadow: 0 0 18px rgba(46, 107, 255, 0.3);
 }
 
 .hero-copy h1 {
@@ -392,7 +407,7 @@ img {
 
 .hero-visual {
   position: relative;
-  min-height: 480px;
+  min-height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1354,6 +1369,10 @@ img {
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+
+  .hero-divider {
+    display: none;
   }
 
   .nav {
