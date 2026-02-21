@@ -58,6 +58,10 @@
     return /[A-Za-zÀ-ÖØ-öø-ÿ]/.test(text);
   }
 
+  function normalizeTranslationKey(text) {
+    return (text || "").replace(/\s+/g, " ").trim();
+  }
+
   function replaceTrimmedText(original, replacement) {
     const trimmed = original.trim();
     const start = original.indexOf(trimmed);
@@ -70,18 +74,20 @@
     if (!original) return;
     const trimmed = original.trim();
     if (!trimmed) return;
+    const key = normalizeTranslationKey(trimmed);
+    if (!key) return;
 
     const parent = node.parentElement;
     if (parent && parent.closest(".lang-switch")) return;
 
-    if (!hasTranslatableChars(trimmed)) return;
+    if (!hasTranslatableChars(key)) return;
 
     // Never hide source text when translation is missing.
     // This keeps local preview (file://) readable and avoids text blinking/disappearing.
-    if (!hasTranslationForLang(trimmed, lang)) return;
+    if (!hasTranslationForLang(key, lang)) return;
 
-    const translated = t(trimmed);
-    if (!translated || translated === trimmed) return;
+    const translated = t(key);
+    if (!translated || translated === key) return;
     node.nodeValue = replaceTrimmedText(original, translated);
   }
 
@@ -93,8 +99,10 @@
       attrs.forEach((attr) => {
         const value = el.getAttribute(attr);
         if (!value) return;
-        const translated = t(value.trim());
-        if (translated && translated !== value.trim()) {
+        const key = normalizeTranslationKey(value);
+        if (!key) return;
+        const translated = t(key);
+        if (translated && translated !== key) {
           el.setAttribute(attr, translated);
         }
       });
@@ -102,7 +110,7 @@
   }
 
   function translateDom(t, lang) {
-    document.title = t(document.title);
+    document.title = t(normalizeTranslationKey(document.title));
 
     const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
       acceptNode(node) {
@@ -148,7 +156,7 @@
       returnEmptyString: false,
     });
 
-    const t = (key) => window.i18next.t(key, { defaultValue: key });
+    const t = (key) => window.i18next.t(normalizeTranslationKey(key), { defaultValue: normalizeTranslationKey(key) });
     translateDom(t, lang);
     setLangUi(lang);
 
