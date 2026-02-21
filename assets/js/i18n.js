@@ -48,17 +48,42 @@
     });
   }
 
-  function translateNodeText(node, t) {
+  function hasTranslationForLang(key, lang) {
+    if (lang === "pt") return true;
+    if (!window.i18next || !key) return false;
+    return window.i18next.exists(key, { lng: lang });
+  }
+
+  function hasTranslatableChars(text) {
+    return /[A-Za-zÀ-ÖØ-öø-ÿ]/.test(text);
+  }
+
+  function replaceTrimmedText(original, replacement) {
+    const trimmed = original.trim();
+    const start = original.indexOf(trimmed);
+    const end = start + trimmed.length;
+    return `${original.slice(0, start)}${replacement}${original.slice(end)}`;
+  }
+
+  function translateNodeText(node, t, lang) {
     const original = node.nodeValue;
     if (!original) return;
     const trimmed = original.trim();
     if (!trimmed) return;
+
+    const parent = node.parentElement;
+    if (parent && parent.closest(".lang-switch")) return;
+
+    if (!hasTranslatableChars(trimmed)) return;
+
+    if (!hasTranslationForLang(trimmed, lang)) {
+      node.nodeValue = replaceTrimmedText(original, "");
+      return;
+    }
+
     const translated = t(trimmed);
     if (!translated || translated === trimmed) return;
-
-    const start = original.indexOf(trimmed);
-    const end = start + trimmed.length;
-    node.nodeValue = `${original.slice(0, start)}${translated}${original.slice(end)}`;
+    node.nodeValue = replaceTrimmedText(original, translated);
   }
 
   function translateAttrs(t) {
@@ -77,7 +102,7 @@
     });
   }
 
-  function translateDom(t) {
+  function translateDom(t, lang) {
     document.title = t(document.title);
 
     const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
@@ -95,7 +120,7 @@
     const nodes = [];
     let current;
     while ((current = walker.nextNode())) nodes.push(current);
-    nodes.forEach((node) => translateNodeText(node, t));
+    nodes.forEach((node) => translateNodeText(node, t, lang));
 
     translateAttrs(t);
   }
@@ -125,7 +150,7 @@
     });
 
     const t = (key) => window.i18next.t(key, { defaultValue: key });
-    translateDom(t);
+    translateDom(t, lang);
     setLangUi(lang);
 
     document.querySelectorAll(".lang-switch .lang").forEach((a) => {
