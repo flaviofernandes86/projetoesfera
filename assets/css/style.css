@@ -1124,6 +1124,15 @@ img {
   margin-top: 16px;
 }
 
+.sponsor-grid > div {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(46, 107, 255, 0.2);
+  border-radius: 14px;
+  padding: 14px 14px 12px;
+  display: grid;
+  gap: 6px;
+}
+
 .sponsor-grid .label {
   font-size: 0.72rem;
   text-transform: uppercase;
@@ -1131,9 +1140,22 @@ img {
   letter-spacing: 0.18em;
 }
 
+.sponsor-grid strong {
+  display: block;
+  font-size: 0.96rem;
+  line-height: 1.4;
+  color: var(--text);
+  text-wrap: balance;
+}
+
 .cta-actions {
   display: grid;
   gap: 12px;
+}
+
+#patrocinio .cta-actions .note {
+  max-width: 36ch;
+  line-height: 1.45;
 }
 
 .note {
