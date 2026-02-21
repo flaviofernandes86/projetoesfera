@@ -1172,7 +1172,7 @@ img {
 
 @media (min-width: 980px) {
   .mediakit {
-    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-columns: 0.8fr 1.2fr;
     align-items: start;
   }
 }
