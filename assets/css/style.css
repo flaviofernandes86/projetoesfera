@@ -452,20 +452,6 @@ img {
   gap: 6px;
 }
 
-.hero-publication-badge .badge-flag {
-  display: inline-flex;
-  width: fit-content;
-  margin: 0 auto;
-  padding: 3px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.42);
-  background: rgba(255, 255, 255, 0.12);
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-weight: 600;
-}
-
 .hero-publication-badge strong {
   display: block;
   margin: 0;
