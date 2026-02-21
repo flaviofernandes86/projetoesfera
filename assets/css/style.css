@@ -747,9 +747,11 @@ img {
   padding: 12px;
   display: grid;
   place-items: center;
-  overflow: hidden;
+  overflow: visible;
   box-shadow: var(--shadow);
   transition: transform 0.25s ease, border-color 0.25s ease;
+  position: relative;
+  text-decoration: none;
 }
 
 .partner-logo:hover {
@@ -764,6 +766,68 @@ img {
   max-height: 100%;
   object-fit: contain;
   border-radius: 12px;
+}
+
+.partner-tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 12px);
+  transform: translateX(-50%) translateY(6px);
+  width: min(290px, 86vw);
+  background: rgba(8, 14, 24, 0.96);
+  color: #f2f7ff;
+  border: 1px solid rgba(88, 193, 238, 0.35);
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: grid;
+  gap: 4px;
+  line-height: 1.35;
+  font-size: 0.78rem;
+  box-shadow: 0 14px 36px rgba(4, 8, 14, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 20;
+}
+
+.partner-tooltip strong {
+  color: #8ad4ff;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.partner-tooltip .tooltip-url {
+  color: #ffffff;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.partner-tooltip small {
+  color: #d6e5f3;
+  font-size: 0.75rem;
+}
+
+.partner-tooltip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: rgba(8, 14, 24, 0.96);
+  border-right: 1px solid rgba(88, 193, 238, 0.35);
+  border-bottom: 1px solid rgba(88, 193, 238, 0.35);
+  rotate: 45deg;
+}
+
+.partner-logo:hover .partner-tooltip,
+.partner-logo:focus-visible .partner-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
 }
 
 .logo-grid > img {
