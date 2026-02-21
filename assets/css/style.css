@@ -326,6 +326,11 @@ img {
   color: var(--accent-2);
 }
 
+#patrocinio .eyebrow,
+#mediakit .eyebrow {
+  color: #22364f !important;
+}
+
 .lead {
   font-size: 1.12rem;
   color: rgba(255, 255, 255, 0.75);
