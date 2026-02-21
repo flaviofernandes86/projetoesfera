@@ -322,6 +322,10 @@ img {
   font-weight: 600;
 }
 
+.section .eyebrow {
+  color: var(--accent-2);
+}
+
 .lead {
   font-size: 1.12rem;
   color: rgba(255, 255, 255, 0.75);
