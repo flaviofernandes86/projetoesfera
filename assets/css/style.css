@@ -308,12 +308,6 @@ img {
   align-items: center;
 }
 
-.hero .hero-container {
-  width: 100%;
-  max-width: none;
-  padding-inline: clamp(22px, 4.2vw, 78px);
-}
-
 .hero-divider {
   width: 1px;
   height: min(520px, 72vh);
@@ -1470,8 +1464,11 @@ img {
 
 @media (max-width: 768px) {
   #sphere-canvas {
-    width: min(330px, 82vw);
-    height: min(330px, 82vw);
+    display: none;
+  }
+
+  .hero-visual {
+    min-height: auto;
   }
 
   .hero {
