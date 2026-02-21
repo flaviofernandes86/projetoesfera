@@ -1,5 +1,5 @@
 (function () {
-  const SUPPORTED = ["pt", "en", "es"];
+  const SUPPORTED = ["pt", "en", "es", "zh-CN"];
   const STORAGE_KEY = "esfera_lang";
 
   function normalizeLang(raw) {
@@ -7,6 +7,7 @@
     const v = raw.toLowerCase();
     if (v.startsWith("en")) return "en";
     if (v.startsWith("es")) return "es";
+    if (v.startsWith("zh")) return "zh-CN";
     return "pt";
   }
 
@@ -39,12 +40,13 @@
     const url = new URL(window.location.href);
     document.querySelectorAll(".lang-switch .lang").forEach((a) => {
       const code = (a.textContent || "").trim().toLowerCase();
-      if (SUPPORTED.includes(code)) {
+      const normalizedCode = normalizeLang(code);
+      if (SUPPORTED.includes(normalizedCode)) {
         const next = new URL(url.toString());
-        next.searchParams.set("lang", code);
+        next.searchParams.set("lang", normalizedCode);
         a.setAttribute("href", `${next.pathname}${next.search}`);
       }
-      a.classList.toggle("active", code === lang);
+      a.classList.toggle("active", normalizedCode === lang);
     });
   }
 
@@ -136,10 +138,11 @@
     if (!window.i18next) return;
 
     const lang = getInitialLang();
-    const [pt, en, es] = await Promise.all([
+    const [pt, en, es, zhCN] = await Promise.all([
       loadLocale("pt"),
       loadLocale("en"),
       loadLocale("es"),
+      loadLocale("zh-CN"),
     ]);
 
     await window.i18next.init({
@@ -149,6 +152,7 @@
         pt: { translation: pt },
         en: { translation: en },
         es: { translation: es },
+        "zh-CN": { translation: zhCN },
       },
       keySeparator: false,
       nsSeparator: false,
