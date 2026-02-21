@@ -308,6 +308,12 @@ img {
   align-items: center;
 }
 
+.hero .hero-container {
+  width: 100%;
+  max-width: none;
+  padding-inline: clamp(22px, 4.2vw, 78px);
+}
+
 .hero-divider {
   width: 1px;
   height: min(520px, 72vh);
