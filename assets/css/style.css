@@ -434,6 +434,38 @@ img {
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.26);
 }
 
+.hero-publication-seal {
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 14px;
+  background: linear-gradient(140deg, rgba(46, 107, 255, 0.24), rgba(255, 255, 255, 0.08));
+  padding: 12px 12px 10px;
+  margin-bottom: 12px;
+}
+
+.hero-publication-seal .seal-kicker {
+  display: inline-block;
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.86);
+  margin-bottom: 4px;
+}
+
+.hero-publication-seal strong {
+  display: block;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.hero-publication-seal p {
+  margin: 0;
+  font-size: 0.84rem;
+  color: rgba(255, 255, 255, 0.86);
+  line-height: 1.45;
+}
+
 .hero-side-info .hero-note {
   margin-bottom: 12px;
 }
