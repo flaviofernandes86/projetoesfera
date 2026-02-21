@@ -1010,6 +1010,46 @@ img {
   gap: 18px;
 }
 
+.mediakit-stage {
+  padding: 24px;
+  border-radius: 20px;
+  border: 1px solid rgba(27, 154, 215, 0.26);
+  background: linear-gradient(140deg, rgba(11, 18, 30, 0.92), rgba(18, 30, 48, 0.92));
+  color: #eef6ff;
+  box-shadow: var(--shadow);
+}
+
+.mediakit-stage h3 {
+  margin: 10px 0 16px;
+  color: #ffffff;
+  font-family: "Syne", sans-serif;
+}
+
+.mediakit-checklist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.mediakit-checklist li {
+  position: relative;
+  padding-left: 18px;
+  color: rgba(238, 246, 255, 0.92);
+}
+
+.mediakit-checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.58em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #58c1ee;
+}
+
 .mediakit-card {
   padding: 22px;
   border-radius: 20px;
@@ -1020,6 +1060,11 @@ img {
 .mediakit-card.accent {
   border-color: rgba(27, 154, 215, 0.3);
   background: linear-gradient(135deg, rgba(27, 154, 215, 0.1), rgba(88, 193, 238, 0.1));
+}
+
+.mediakit-card a {
+  color: var(--accent);
+  font-weight: 600;
 }
 
 .site-footer {
