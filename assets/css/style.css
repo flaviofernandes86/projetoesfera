@@ -1170,6 +1170,13 @@ img {
   align-items: center;
 }
 
+@media (min-width: 980px) {
+  .mediakit {
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: start;
+  }
+}
+
 .mediakit-actions {
   display: grid;
   gap: 10px;
