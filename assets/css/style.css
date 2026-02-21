@@ -1042,7 +1042,16 @@ img {
   50% { transform: translateY(18px) scale(1.03); opacity: 1; }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
+  .hero {
+    overflow: visible;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
   .nav {
     display: none;
   }
@@ -1056,7 +1065,7 @@ img {
   .hero-panel {
     position: static;
     margin-top: 24px;
-    width: min(340px, 92vw);
+    width: min(420px, 92vw);
   }
 
   .manifesto {
@@ -1065,6 +1074,11 @@ img {
 }
 
 @media (max-width: 768px) {
+  #sphere-canvas {
+    width: min(360px, 86vw);
+    height: min(360px, 86vw);
+  }
+
   .hero {
     background-position: center 25%;
   }
