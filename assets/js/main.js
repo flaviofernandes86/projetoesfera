@@ -84,6 +84,19 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
   restartAuto();
 });
 
+// Randomize support logos on each page load
+document.querySelectorAll("[data-randomize-logos]").forEach((grid) => {
+  const logos = Array.from(grid.querySelectorAll(":scope > .partner-logo"));
+  if (logos.length < 2) return;
+
+  for (let i = logos.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [logos[i], logos[j]] = [logos[j], logos[i]];
+  }
+
+  logos.forEach((logo) => grid.appendChild(logo));
+});
+
 // Modal handling
 const overlay = document.getElementById("modal-overlay");
 const content = document.getElementById("modal-content");
