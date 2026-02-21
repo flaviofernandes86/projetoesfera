@@ -76,10 +76,9 @@
 
     if (!hasTranslatableChars(trimmed)) return;
 
-    if (!hasTranslationForLang(trimmed, lang)) {
-      node.nodeValue = replaceTrimmedText(original, "");
-      return;
-    }
+    // Never hide source text when translation is missing.
+    // This keeps local preview (file://) readable and avoids text blinking/disappearing.
+    if (!hasTranslationForLang(trimmed, lang)) return;
 
     const translated = t(trimmed);
     if (!translated || translated === trimmed) return;
