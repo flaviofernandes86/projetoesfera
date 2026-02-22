@@ -1545,6 +1545,39 @@ img {
   font-size: 0.85rem;
 }
 
+.outreach-box {
+  margin-top: 18px;
+  border: 1px dashed rgba(46, 107, 255, 0.3);
+  border-radius: 22px;
+  background: linear-gradient(140deg, #ffffff, #f7faff);
+  padding: 24px;
+}
+
+.outreach-box h3 {
+  font-family: "Syne", sans-serif;
+  margin: 6px 0 10px;
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+}
+
+.outreach-box p {
+  color: var(--muted);
+}
+
+.outreach-box .list {
+  margin: 12px 0 0;
+}
+
+.outreach-box .list li {
+  color: #3a4b61;
+}
+
+.outreach-actions {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .mediakit {
   display: grid;
   gap: 28px;
