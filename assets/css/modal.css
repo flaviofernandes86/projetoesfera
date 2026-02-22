@@ -20,9 +20,9 @@
 .modal {
   background: #ffffff;
   border-radius: 20px;
-  padding: 28px;
-  width: min(760px, 92vw);
-  max-height: 80vh;
+  padding: 34px;
+  width: min(1120px, 96vw);
+  max-height: 90vh;
   overflow: auto;
   box-shadow: 0 30px 80px rgba(12, 20, 34, 0.25);
   position: relative;
@@ -78,8 +78,8 @@
 
 .history-archive {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 22px;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 28px;
   align-items: start;
 }
 
@@ -89,8 +89,8 @@
 
 .history-photo img {
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
+  max-height: 520px;
+  object-fit: contain;
   border-radius: 16px;
   border: 1px solid rgba(12, 20, 34, 0.12);
   background: #eef2f8;
@@ -104,6 +104,10 @@
 
 .history-archive > div {
   padding-top: 4px;
+}
+
+.history-archive > div p + p {
+  margin-top: 10px;
 }
 
 .profile-links {
@@ -142,6 +146,8 @@
 @media (max-width: 640px) {
   .modal {
     padding: 20px;
+    width: min(1120px, 98vw);
+    max-height: 92vh;
   }
 
   .profile-archive {
