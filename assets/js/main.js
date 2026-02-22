@@ -129,6 +129,11 @@ document.querySelectorAll(".team-card").forEach((card) => {
   }
 });
 
+document.querySelectorAll(".history-open-btn").forEach((button) => {
+  const id = button.getAttribute("data-modal-target");
+  button.addEventListener("click", () => openModal(id));
+});
+
 if (overlay) {
   overlay.addEventListener("click", (event) => {
     if (event.target === overlay || event.target.classList.contains("modal-close")) {
@@ -138,7 +143,7 @@ if (overlay) {
 }
 
 window.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && overlay.classList.contains("open")) {
+  if (overlay && event.key === "Escape" && overlay.classList.contains("open")) {
     closeModal();
   }
 });

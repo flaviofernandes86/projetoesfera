@@ -64,8 +64,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.min.css" />
   <link rel="icon" type="image/png" href="/assets/img/favicon-esfera.png?v=20260221.4" />
 
-  <link rel="stylesheet" href="assets/css/style.css?v=20260222.2" />
-  <link rel="stylesheet" href="assets/css/modal.css?v=20260221.200722" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20260222.3" />
+  <link rel="stylesheet" href="assets/css/modal.css?v=20260222.1" />
 </head>
 <body>
   <div class="grid-overlay"></div>
@@ -428,31 +428,38 @@
           <p>
             O primeiro agroglifo brasileiro considerado autêntico surgiu em 09 de novembro de 2008, em Ipuaçu (SC). A base histórica abaixo resume os registros que orientam a operação atual.
           </p>
+          <p>Clique em cada ano para abrir o resumo completo com imagem de referência.</p>
         </div>
         <div class="history-ribbon">
           <article class="history-node">
             <span class="year">2008</span>
             <p>Primeiro registro considerado autêntico em Ipuaçu (SC).</p>
+            <button class="history-open-btn" type="button" data-modal-target="modal-history-2008">Abrir histórico completo</button>
           </article>
           <article class="history-node">
             <span class="year">2012</span>
             <p>Registro de “marca fantasma” em plantação alternada, reforçando a verificação em ciclos seguintes.</p>
+            <button class="history-open-btn" type="button" data-modal-target="modal-history-2012">Abrir histórico completo</button>
           </article>
           <article class="history-node">
             <span class="year">2016</span>
             <p>Prudentópolis (PR) apresentou um dos casos com análise laboratorial mais detalhada.</p>
+            <button class="history-open-btn" type="button" data-modal-target="modal-history-2016">Abrir histórico completo</button>
           </article>
           <article class="history-node">
             <span class="year">2022</span>
             <p>Retorno das ocorrências em Ipuaçu, retomando monitoramento intensivo.</p>
+            <button class="history-open-btn" type="button" data-modal-target="modal-history-2022">Abrir histórico completo</button>
           </article>
           <article class="history-node">
             <span class="year">2024</span>
             <p>Novo caso em Ipuaçu com avaliações de equipes e resultado inconclusivo.</p>
+            <button class="history-open-btn" type="button" data-modal-target="modal-history-2024">Abrir histórico completo</button>
           </article>
           <article class="history-node">
             <span class="year">2025</span>
             <p>Novo registro e destruição prematura da formação, reforçando a importância do isolamento rápido.</p>
+            <button class="history-open-btn" type="button" data-modal-target="modal-history-2025">Abrir histórico completo</button>
           </article>
         </div>
       </div>
@@ -739,6 +746,79 @@
     </div>
   </div>
 
+  <template id="modal-history-2008">
+    <article class="history-archive">
+      <figure class="history-photo">
+        <img src="assets/img/history/history-14.png?v=20260222.1" alt="Mapa de Ipuaçu (SC), referência regional dos registros históricos desde 2008" />
+        <figcaption>Ipuaçu localizado na região Oeste de Santa Catarina, onde costumam aparecer os Agroglifos desde 2008.</figcaption>
+      </figure>
+      <div>
+        <h3 id="modal-title">2008 • Primeiro registro considerado autêntico</h3>
+        <p>Em 09 de novembro de 2008 foi registrado em Ipuaçu (SC) o primeiro agroglifo brasileiro considerado autêntico. No dia seguinte, outro registro relevante ocorreu em Ouro Verde.</p>
+      </div>
+    </article>
+  </template>
+  <template id="modal-history-2012">
+    <article class="history-archive">
+      <figure class="history-photo">
+        <img src="assets/img/history/history-35.png?v=20260222.1" alt="Croqui do agroglifo de 2012 em Ipuaçu (SC), arquivo Toni Inajar" />
+        <figcaption>Agroglifo de 2012 – Arquivo Toni Inajar.</figcaption>
+      </figure>
+      <div>
+        <h3 id="modal-title">2012 • Registro de “marca fantasma”</h3>
+        <p>Em 2012, um agroglifo em Ipuaçu apresentou formação com maior complexidade e consolidou o monitoramento da chamada “marca fantasma” em safras posteriores.</p>
+      </div>
+    </article>
+  </template>
+  <template id="modal-history-2016">
+    <article class="history-archive">
+      <figure class="history-photo">
+        <img src="assets/img/history/history-43.png?v=20260222.1" alt="Agroglifo de 2016 em Prudentópolis (PR), arquivo Toni Inajar" />
+        <figcaption>Agroglifo de 2016 em Prudentópolis (PR) – Arquivo Toni Inajar.</figcaption>
+      </figure>
+      <div>
+        <h3 id="modal-title">2016 • Análises laboratoriais de referência</h3>
+        <p>O caso de Prudentópolis (PR), em 2016, reuniu medições de campo eletromagnético e análise laboratorial com achados relevantes para a investigação científica.</p>
+      </div>
+    </article>
+  </template>
+  <template id="modal-history-2022">
+    <article class="history-archive">
+      <figure class="history-photo">
+        <img src="assets/img/history/history-46.png?v=20260222.1" alt="Agroglifo de 2022 em Ipuaçu (SC), imagem de Tiago Kosiski" />
+        <figcaption>Agroglifo de 2022 em Ipuaçu (SC) – Imagem de Tiago Kosiski.</figcaption>
+      </figure>
+      <div>
+        <h3 id="modal-title">2022 • Retomada das ocorrências</h3>
+        <p>Após um período sem registros fortes, 2022 marcou a retomada de ocorrências em Ipuaçu e a reativação de monitoramento intensivo em campo.</p>
+      </div>
+    </article>
+  </template>
+  <template id="modal-history-2024">
+    <article class="history-archive">
+      <figure class="history-photo">
+        <img src="assets/img/history/history-48.png?v=20260222.1" alt="Croqui do agroglifo de 2024 em Ipuaçu (SC), arquivo do autor" />
+        <figcaption>Croqui elaborado pelo Eng. Douglas Albrecht Novo de Oliveira nas medidas de Carlos Alberto Machado.</figcaption>
+      </figure>
+      <div>
+        <h3 id="modal-title">2024 • Caso com resultado inconclusivo</h3>
+        <p>Em 2024, um novo caso em Ipuaçu mobilizou equipes de análise. A avaliação técnica do caso foi mantida como inconclusiva no fechamento das leituras iniciais.</p>
+      </div>
+    </article>
+  </template>
+  <template id="modal-history-2025">
+    <article class="history-archive">
+      <figure class="history-photo">
+        <img src="assets/img/history/history-50.png?v=20260222.1" alt="Trator destruindo o agroglifo de 2025 em Ipuaçu (SC), NSC Total" />
+        <figcaption>Trator destruindo o agroglifo de 2025 em Ipuaçu no mesmo dia de seu aparecimento.</figcaption>
+      </figure>
+      <div>
+        <h3 id="modal-title">2025 • Destruição prematura da formação</h3>
+        <p>Em 2025 houve novo registro em Ipuaçu, porém com destruição prematura da formação no mesmo dia, o que reforça a necessidade de isolamento rápido para preservar evidências.</p>
+      </div>
+    </article>
+  </template>
+
   <template id="modal-machado">
     <article class="profile-archive">
       <figure class="profile-photo">
@@ -882,6 +962,6 @@
   <script src="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.iife.js" defer></script>
   <script src="https://unpkg.com/i18next@23.16.8/dist/umd/i18next.min.js"></script>
   <script src="assets/js/i18n.js?v=20260221.202505"></script>
-  <script src="assets/js/main.js?v=20260221.4"></script>
+  <script src="assets/js/main.js?v=20260222.1"></script>
 </body>
 </html>
