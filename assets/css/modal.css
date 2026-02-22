@@ -51,6 +51,42 @@
   color: #2e3a4f;
 }
 
+.profile-headline {
+  margin-bottom: 14px;
+}
+
+.profile-resource-list {
+  margin: 0 0 14px;
+  padding-left: 18px;
+  color: #1e2b42;
+}
+
+.profile-resource-list li {
+  margin-bottom: 6px;
+}
+
+.profile-resource-list a {
+  color: #1e4fb0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.profile-cv {
+  margin-top: 14px;
+}
+
+.profile-cv h4 {
+  margin: 0 0 10px;
+  font-family: "Syne", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  color: #10223d;
+}
+
+.profile-cv p {
+  margin-bottom: 10px;
+}
+
 .profile-archive {
   display: grid;
   grid-template-columns: clamp(150px, 30%, 220px) minmax(0, 1fr);
