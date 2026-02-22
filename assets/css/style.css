@@ -1036,6 +1036,16 @@ img {
   max-width: 900px;
 }
 
+#regioes-estrategicas .section-header {
+  max-width: 1120px;
+}
+
+#regioes-estrategicas .section-header p {
+  max-width: none;
+  line-height: 1.75;
+  text-wrap: pretty;
+}
+
 #base-historica {
   position: relative;
   overflow: hidden;
