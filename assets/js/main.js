@@ -4,6 +4,8 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 const siteHeader = document.querySelector(".site-header");
 const heroSection = document.querySelector(".hero");
+const navToggle = document.querySelector(".nav-toggle");
+const siteNav = document.getElementById("site-nav");
 
 function syncHeaderWithHero() {
   if (!siteHeader || !heroSection) return;
@@ -24,7 +26,20 @@ for (const link of document.querySelectorAll('a[href^="#"]')) {
     if (target) {
       event.preventDefault();
       target.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (siteHeader && siteHeader.classList.contains("menu-open")) {
+        siteHeader.classList.remove("menu-open");
+      }
+      if (navToggle) {
+        navToggle.setAttribute("aria-expanded", "false");
+      }
     }
+  });
+}
+
+if (navToggle && siteHeader && siteNav) {
+  navToggle.addEventListener("click", () => {
+    const open = siteHeader.classList.toggle("menu-open");
+    navToggle.setAttribute("aria-expanded", open ? "true" : "false");
   });
 }
 
@@ -143,6 +158,10 @@ if (overlay) {
 }
 
 window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && siteHeader && siteHeader.classList.contains("menu-open")) {
+    siteHeader.classList.remove("menu-open");
+    if (navToggle) navToggle.setAttribute("aria-expanded", "false");
+  }
   if (overlay && event.key === "Escape" && overlay.classList.contains("open")) {
     closeModal();
   }
