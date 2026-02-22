@@ -220,40 +220,6 @@ img {
   border-color: rgba(255, 255, 255, 0.42);
 }
 
-.nav-toggle {
-  display: none;
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.9);
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.nav-toggle span {
-  width: 18px;
-  height: 2px;
-  border-radius: 2px;
-  background: #1d2b3f;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.site-header.menu-open .nav-toggle span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-
-.site-header.menu-open .nav-toggle span:nth-child(2) {
-  opacity: 0;
-}
-
-.site-header.menu-open .nav-toggle span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
-}
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -1701,70 +1667,8 @@ img {
     display: none;
   }
 
-  .header-inner {
-    position: relative;
-    gap: 12px;
-  }
-
-  .nav-toggle {
-    display: inline-flex;
-  }
-
-  .site-header.is-hero .nav-toggle {
-    background: rgba(5, 10, 20, 0.5);
-    border-color: rgba(255, 255, 255, 0.28);
-  }
-
-  .site-header.is-hero .nav-toggle span {
-    background: #fff;
-  }
-
   .nav {
     display: none;
-    position: absolute;
-    top: calc(100% + 10px);
-    right: 0;
-    left: 0;
-    z-index: 60;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 6px;
-    background: rgba(255, 255, 255, 0.98);
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    padding: 12px;
-    box-shadow: 0 18px 34px rgba(8, 18, 32, 0.16);
-  }
-
-  .site-header.menu-open .nav {
-    display: flex;
-  }
-
-  .site-header.is-hero .nav {
-    background: rgba(9, 17, 30, 0.94);
-    border-color: rgba(255, 255, 255, 0.2);
-  }
-
-  .nav a {
-    padding: 10px 12px;
-    border-radius: 10px;
-    color: #22364f;
-  }
-
-  .site-header.is-hero .nav a {
-    color: rgba(255, 255, 255, 0.92);
-  }
-
-  .nav a:hover {
-    background: rgba(46, 107, 255, 0.1);
-  }
-
-  .site-header.is-hero .nav a:hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
-
-  .nav .nav-cta {
-    margin-top: 6px;
   }
 
   .hero-visual {
