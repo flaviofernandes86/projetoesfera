@@ -372,6 +372,10 @@ img {
 }
 
 .shareon button {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   border-radius: 999px !important;
   width: 42px;
   height: 42px;
@@ -382,8 +386,10 @@ img {
 }
 
 .shareon button::before {
+  position: absolute !important;
   left: 50% !important;
   top: 50% !important;
+  margin: 0 !important;
   transform: translate(-50%, -50%);
 }
 
