@@ -167,6 +167,16 @@
   text-decoration: none;
 }
 
+.profile-links a.profile-link-chip {
+  width: auto;
+  height: 38px;
+  padding: 0 12px;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
 .profile-links a:hover {
   background: #10223d;
   color: #fff;
