@@ -169,6 +169,7 @@
 
 .profile-links a.profile-link-chip {
   width: auto;
+  min-width: 112px;
   height: 38px;
   padding: 0 12px;
   gap: 8px;
