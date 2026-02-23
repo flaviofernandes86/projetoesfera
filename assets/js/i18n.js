@@ -1,6 +1,7 @@
 (function () {
   const SUPPORTED = ["pt", "en", "es", "fr", "zh-CN"];
   const STORAGE_KEY = "esfera_lang";
+  const ASSET_VERSION = "20260223.1";
 
   function normalizeLang(raw) {
     if (!raw) return "pt";
@@ -24,7 +25,7 @@
   }
 
   async function loadLocale(lang) {
-    const path = `assets/locales/${lang}/common.json`;
+    const path = `assets/locales/${lang}/common.json?v=${ASSET_VERSION}`;
     try {
       const res = await fetch(path, { cache: "no-store" });
       if (!res.ok) return {};

@@ -142,7 +142,7 @@ img {
   height: 30px;
   flex: 0 0 30px;
   border-radius: 50%;
-  background-image: url("../img/logo-esfera-mark.png");
+  background-image: url("../img/logo-esfera-mark.png?v=20260223.1");
   background-size: 78%;
   background-position: center;
   background-repeat: no-repeat;
@@ -257,7 +257,7 @@ img {
   min-height: 100vh;
   min-height: 100svh;
   overflow: hidden;
-  background-image: url("../img/fundo.png");
+  background-image: url("../img/fundo.png?v=20260223.1");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 35%;
@@ -549,7 +549,7 @@ img {
 }
 
 .section--pattern {
-  background-image: url("../img/agroglifo-pattern.svg");
+  background-image: url("../img/agroglifo-pattern.svg?v=20260223.1");
   background-repeat: no-repeat;
   background-position: 100% 0;
   background-size: 520px;
