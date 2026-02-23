@@ -1,5 +1,5 @@
 (function () {
-  const SUPPORTED = ["pt", "en", "es", "zh-CN"];
+  const SUPPORTED = ["pt", "en", "es", "fr", "zh-CN"];
   const STORAGE_KEY = "esfera_lang";
 
   function normalizeLang(raw) {
@@ -7,6 +7,7 @@
     const v = raw.toLowerCase();
     if (v.startsWith("en")) return "en";
     if (v.startsWith("es")) return "es";
+    if (v.startsWith("fr")) return "fr";
     if (v.startsWith("zh")) return "zh-CN";
     return "pt";
   }
@@ -138,10 +139,11 @@
     if (!window.i18next) return;
 
     const lang = getInitialLang();
-    const [pt, en, es, zhCN] = await Promise.all([
+    const [pt, en, es, fr, zhCN] = await Promise.all([
       loadLocale("pt"),
       loadLocale("en"),
       loadLocale("es"),
+      loadLocale("fr"),
       loadLocale("zh-CN"),
     ]);
 
@@ -152,6 +154,7 @@
         pt: { translation: pt },
         en: { translation: en },
         es: { translation: es },
+        fr: { translation: fr },
         "zh-CN": { translation: zhCN },
       },
       keySeparator: false,
