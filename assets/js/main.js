@@ -129,8 +129,10 @@ document.querySelectorAll(".shareon").forEach((shareBox) => {
     const originalLabel = copyButton.textContent || "Copiar link";
 
     const markCopied = () => {
-      copyButton.textContent = "Link copiado";
+      copyButton.classList.add("is-copied");
+      copyButton.textContent = "Copiado";
       window.setTimeout(() => {
+        copyButton.classList.remove("is-copied");
         copyButton.textContent = originalLabel;
       }, 1800);
     };

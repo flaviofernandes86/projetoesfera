@@ -499,7 +499,7 @@ img {
   margin-bottom: 14px;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 8px;
 }
 
@@ -508,22 +508,36 @@ img {
   align-items: center;
   justify-content: center;
   width: auto !important;
-  min-width: 116px !important;
+  min-width: 124px !important;
   height: 42px;
-  padding: 0 14px !important;
+  padding: 0 16px !important;
   white-space: nowrap;
-  border-radius: 999px;
+  border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.22);
   background: rgba(5, 10, 20, 0.32);
   color: #ffffff;
-  font-size: 0.83rem;
+  font-size: 0.82rem;
   font-weight: 600;
+  letter-spacing: 0.02em;
   cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
 .shareon .copy-link-btn:hover,
 .shareon .copy-link-btn:focus-visible {
   background: rgba(14, 34, 56, 0.78);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+.shareon .copy-link-btn.is-copied {
+  background: rgba(33, 136, 76, 0.9);
+  border-color: rgba(173, 255, 203, 0.72);
+}
+
+.shareon .copy-link-btn.is-copied::before {
+  content: "✓";
+  margin-right: 6px;
 }
 
 .hero-side-info .hero-stats {
@@ -1817,6 +1831,10 @@ img {
 }
 
 @media (max-width: 600px) {
+  .hero-side-info .shareon {
+    flex-wrap: wrap;
+  }
+
   .ops-media-grid {
     grid-template-columns: 1fr;
   }
