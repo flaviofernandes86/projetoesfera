@@ -101,7 +101,8 @@ document.querySelectorAll("[data-randomize-logos]").forEach((grid) => {
 document.querySelectorAll(".shareon").forEach((shareBox) => {
   const rawUrl = shareBox.getAttribute("data-url");
   const rawTitle = shareBox.getAttribute("data-title");
-  const pageUrl = encodeURIComponent(rawUrl || window.location.href);
+  const shareUrl = rawUrl || window.location.href;
+  const pageUrl = encodeURIComponent(shareUrl);
   const pageTitle = encodeURIComponent(rawTitle || document.title);
 
   const routes = {
@@ -121,6 +122,42 @@ document.querySelectorAll(".shareon").forEach((shareBox) => {
       window.open(href, "_blank", "noopener,noreferrer");
     });
   });
+
+  const copyButton = shareBox.parentElement?.querySelector(".copy-link-btn");
+  if (copyButton && copyButton.dataset.shareBound !== "1") {
+    copyButton.dataset.shareBound = "1";
+    const originalLabel = copyButton.textContent || "Copiar link";
+
+    const markCopied = () => {
+      copyButton.textContent = "Link copiado";
+      window.setTimeout(() => {
+        copyButton.textContent = originalLabel;
+      }, 1800);
+    };
+
+    copyButton.addEventListener("click", async () => {
+      try {
+        if (navigator.clipboard?.writeText) {
+          await navigator.clipboard.writeText(shareUrl);
+          markCopied();
+          return;
+        }
+      } catch {
+        // Fallback below
+      }
+
+      const textarea = document.createElement("textarea");
+      textarea.value = shareUrl;
+      textarea.setAttribute("readonly", "");
+      textarea.style.position = "absolute";
+      textarea.style.left = "-9999px";
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
+      markCopied();
+    });
+  }
 });
 
 // Modal handling
