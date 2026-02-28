@@ -97,6 +97,32 @@ document.querySelectorAll("[data-randomize-logos]").forEach((grid) => {
   logos.forEach((logo) => grid.appendChild(logo));
 });
 
+// Share buttons fallback (works even if external share library does not initialize)
+document.querySelectorAll(".shareon").forEach((shareBox) => {
+  const rawUrl = shareBox.getAttribute("data-url");
+  const rawTitle = shareBox.getAttribute("data-title");
+  const pageUrl = encodeURIComponent(rawUrl || window.location.href);
+  const pageTitle = encodeURIComponent(rawTitle || document.title);
+
+  const routes = {
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`,
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`,
+    telegram: `https://t.me/share/url?url=${pageUrl}&text=${pageTitle}`,
+    whatsapp: `https://wa.me/?text=${pageTitle}%20${pageUrl}`,
+  };
+
+  Object.entries(routes).forEach(([network, href]) => {
+    const button = shareBox.querySelector(`button.${network}`);
+    if (!button || button.dataset.shareBound === "1") return;
+
+    button.type = "button";
+    button.dataset.shareBound = "1";
+    button.addEventListener("click", () => {
+      window.open(href, "_blank", "noopener,noreferrer");
+    });
+  });
+});
+
 // Modal handling
 const overlay = document.getElementById("modal-overlay");
 const content = document.getElementById("modal-content");
