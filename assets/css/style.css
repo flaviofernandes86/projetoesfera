@@ -39,6 +39,23 @@ img {
   display: block;
 }
 
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+[role="button"],
+.btn {
+  cursor: pointer;
+}
+
+button:disabled,
+input[type="button"]:disabled,
+input[type="submit"]:disabled,
+input[type="reset"]:disabled,
+.btn:disabled {
+  cursor: not-allowed;
+}
+
 .container {
   width: min(1180px, 92vw);
   margin: 0 auto;
