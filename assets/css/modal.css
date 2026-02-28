@@ -146,6 +146,26 @@
   margin-top: 10px;
 }
 
+.video-archive {
+  display: grid;
+  gap: 16px;
+}
+
+.video-embed-wrap {
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(12, 20, 34, 0.14);
+  background: #0b1220;
+}
+
+.video-embed-wrap iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  display: block;
+}
+
 .profile-links {
   margin-top: 14px;
   display: flex;

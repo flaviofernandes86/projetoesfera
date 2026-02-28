@@ -489,6 +489,14 @@ img {
   margin: 0;
 }
 
+.hero-publication-badge .hero-video-btn {
+  justify-self: center;
+  margin-top: 4px;
+  border-color: rgba(255, 255, 255, 0.44);
+  background: rgba(6, 12, 22, 0.36);
+  color: #ffffff;
+}
+
 .hero-side-info .hero-note {
   font-size: 1.04rem;
   line-height: 1.55;

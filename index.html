@@ -127,8 +127,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.min.css" />
   <link rel="icon" type="image/png" href="/assets/img/favicon-esfera.png?v=20260223.1" />
 
-  <link rel="stylesheet" href="assets/css/style.css?v=20260228.1428" />
-  <link rel="stylesheet" href="assets/css/modal.css?v=20260228.1428" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20260228.1536" />
+  <link rel="stylesheet" href="assets/css/modal.css?v=20260228.1536" />
 </head>
 <body>
   <div class="grid-overlay"></div>
@@ -178,8 +178,9 @@
         <div class="hero-divider" aria-hidden="true"></div>
         <div class="hero-visual">
           <canvas id="sphere-canvas" aria-label="Esfera metálica 3D"></canvas>
-          <div class="hero-publication-badge" aria-label="Estudo científico publicado">
-            <strong>Participe de um estudo científico com resultados publicados.</strong>
+          <div class="hero-publication-badge" aria-label="Apresentação em vídeo do Projeto Esfera">
+            <strong>Assista à apresentação oficial do Projeto Esfera.</strong>
+            <button class="btn small hero-video-btn" type="button" data-modal-target="modal-apresentacao">Ver apresentação em vídeo</button>
           </div>
           <div class="hero-side-info">
             <p class="hero-note">
@@ -927,6 +928,24 @@
       </div>
     </article>
   </template>
+  <template id="modal-apresentacao">
+    <article class="video-archive">
+      <div>
+        <h3 id="modal-title">Apresentação Oficial do Projeto Esfera</h3>
+        <p>Conheça a proposta, os objetivos e a visão científica do Projeto Esfera.</p>
+      </div>
+      <div class="video-embed-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/FcW7Yw36-MM?autoplay=1&rel=0"
+          title="Apresentação do Projeto Esfera no YouTube"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </article>
+  </template>
 
   <template id="modal-machado">
     <article class="profile-archive">
@@ -1194,7 +1213,7 @@
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.iife.js" defer></script>
   <script src="https://unpkg.com/i18next@23.16.8/dist/umd/i18next.min.js"></script>
-  <script src="assets/js/i18n.js?v=20260228.1428"></script>
-  <script src="assets/js/main.js?v=20260228.1428"></script>
+  <script src="assets/js/i18n.js?v=20260228.1536"></script>
+  <script src="assets/js/main.js?v=20260228.1536"></script>
 </body>
 </html>

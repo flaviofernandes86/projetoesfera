@@ -194,8 +194,9 @@ document.querySelectorAll(".team-card").forEach((card) => {
   }
 });
 
-document.querySelectorAll(".history-open-btn").forEach((button) => {
+document.querySelectorAll("button[data-modal-target]").forEach((button) => {
   const id = button.getAttribute("data-modal-target");
+  if (!id) return;
   button.addEventListener("click", () => openModal(id));
 });
 
