@@ -493,6 +493,8 @@ img {
   justify-self: center;
   margin-top: 4px;
   gap: 8px;
+  font-size: 0.98rem;
+  padding: 9px 18px;
   border-color: rgba(255, 255, 255, 0.44);
   background: rgba(6, 12, 22, 0.36);
   color: #ffffff;
