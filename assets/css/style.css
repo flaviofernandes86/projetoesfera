@@ -504,19 +504,27 @@ img {
 }
 
 .shareon .copy-link-btn {
+  appearance: none;
+  -webkit-appearance: none;
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
   width: auto !important;
   min-width: 124px !important;
   height: 42px;
+  margin: 0 !important;
   padding: 0 16px !important;
+  line-height: 1;
+  text-align: center;
+  text-indent: 0;
+  background-image: none !important;
   white-space: nowrap;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.22);
   background: rgba(5, 10, 20, 0.32);
   color: #ffffff;
   font-size: 0.82rem;
+  font-family: inherit;
   font-weight: 600;
   letter-spacing: 0.02em;
   cursor: pointer;
