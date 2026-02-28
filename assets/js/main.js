@@ -123,7 +123,7 @@ document.querySelectorAll(".shareon").forEach((shareBox) => {
     });
   });
 
-  const copyButton = shareBox.parentElement?.querySelector(".copy-link-btn");
+  const copyButton = shareBox.querySelector(".copy-link-btn");
   if (copyButton && copyButton.dataset.shareBound !== "1") {
     copyButton.dataset.shareBound = "1";
     const originalLabel = copyButton.textContent || "Copiar link";

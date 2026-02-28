@@ -497,10 +497,27 @@ img {
 
 .hero-side-info .shareon {
   margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.copy-link-btn {
-  margin-bottom: 14px;
+.shareon .copy-link-btn {
+  height: 42px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(5, 10, 20, 0.32);
+  color: #ffffff;
+  font-size: 0.83rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.shareon .copy-link-btn:hover,
+.shareon .copy-link-btn:focus-visible {
+  background: rgba(14, 34, 56, 0.78);
 }
 
 .hero-side-info .hero-stats {
