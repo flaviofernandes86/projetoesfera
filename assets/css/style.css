@@ -1716,24 +1716,26 @@ img {
 
 .site-footer {
   border-top: 1px solid var(--line);
-  padding: 30px 0;
+  padding: 20px 0;
   background: rgba(255, 255, 255, 0.92);
 }
 
 .footer-inner {
   width: 100%;
   max-width: 100%;
-  padding: 0 clamp(18px, 4vw, 52px);
+  padding: 0 clamp(14px, 3vw, 34px);
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr 0.9fr;
-  gap: 22px;
+  gap: 14px;
   color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
 }
 
 .footer-col {
   display: grid;
   align-content: start;
-  gap: 8px;
+  gap: 5px;
 }
 
 .footer-col strong {
