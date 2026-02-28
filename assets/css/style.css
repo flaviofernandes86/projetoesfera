@@ -388,7 +388,7 @@ img {
   margin-bottom: 24px;
 }
 
-.shareon button {
+.shareon button:not(.copy-link-btn) {
   position: relative !important;
   display: inline-flex !important;
   align-items: center !important;
@@ -402,7 +402,7 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.22) !important;
 }
 
-.shareon button::before {
+.shareon button:not(.copy-link-btn)::before {
   position: absolute !important;
   left: 50% !important;
   top: 50% !important;
