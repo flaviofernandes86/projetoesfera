@@ -492,9 +492,16 @@ img {
 .hero-publication-badge .hero-video-btn {
   justify-self: center;
   margin-top: 4px;
+  gap: 8px;
   border-color: rgba(255, 255, 255, 0.44);
   background: rgba(6, 12, 22, 0.36);
   color: #ffffff;
+}
+
+.hero-publication-badge .hero-video-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
 }
 
 .hero-side-info .hero-note {
