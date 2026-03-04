@@ -145,8 +145,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.min.css" />
   <link rel="icon" type="image/png" href="/assets/img/favicon-esfera.png?v=20260223.1" />
 
-  <link rel="stylesheet" href="assets/css/style.css?v=20260303.3" />
-  <link rel="stylesheet" href="assets/css/modal.css?v=20260303.3" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20260304.1" />
+  <link rel="stylesheet" href="assets/css/modal.css?v=20260304.1" />
 </head>
 <body>
   <div class="grid-overlay"></div>
@@ -712,6 +712,16 @@
             Compartilhar com amigos, grupos e contatos estratégicos já gera impacto real.
             Quanto mais pessoas qualificadas conhecerem o projeto, maior a rede de apoio científico.
           </p>
+          <div class="pix-support">
+            <div class="pix-support-copy">
+              <p class="label">Apoio financeiro via Pix</p>
+              <p>Escaneie o QR Code ou clique para abrir em tamanho maior com opção de copiar o código Pix.</p>
+            </div>
+            <button class="pix-qr-trigger" type="button" data-modal-target="modal-pix-qr" aria-label="Abrir QR Code Pix em tamanho maior">
+              <img src="qrcode.png?v=20260304.1" alt="QR Code Pix para apoiar o Projeto Esfera" loading="lazy" decoding="async" width="420" height="420" />
+              <span>Abrir QR Code Pix</span>
+            </button>
+          </div>
           <ul class="list">
             <li>Envie o link oficial para contatos que valorizam ciência e investigação séria.</li>
             <li>Compartilhe em grupos locais para ampliar alcance e conscientização.</li>
@@ -982,6 +992,23 @@
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
         ></iframe>
+      </div>
+    </article>
+  </template>
+  <template id="modal-pix-qr">
+    <article class="pix-modal">
+      <h3 id="modal-title">Apoio via Pix</h3>
+      <p>Escaneie o QR Code abaixo ou utilize o código “copia e cola” para contribuir com o Projeto Esfera.</p>
+      <div class="pix-modal-grid">
+        <figure class="pix-modal-preview">
+          <img src="qrcode.png?v=20260304.1" alt="QR Code Pix ampliado para apoio ao Projeto Esfera" loading="lazy" decoding="async" width="420" height="420" />
+        </figure>
+        <div class="pix-copy-box">
+          <label for="pix-copy-code">Pix copia e cola</label>
+          <textarea id="pix-copy-code" readonly>00020126330014br.gov.bcb.pix0111478961679725204000053039865802BR5917CAPITAO ESCARLATE6009Sao Paulo610901227-20062220518daqr278213737919446304AEBC</textarea>
+          <button class="btn pix-copy-btn" type="button" data-copy-source="pix-copy-code">Copiar código Pix</button>
+          <small>Após copiar, cole no app do seu banco em “Pix copia e cola”.</small>
+        </div>
       </div>
     </article>
   </template>
@@ -1307,6 +1334,6 @@
   <script src="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.iife.js" defer></script>
   <script src="https://unpkg.com/i18next@23.16.8/dist/umd/i18next.min.js"></script>
   <script src="assets/js/i18n.js?v=20260228.1604"></script>
-  <script src="assets/js/main.js?v=20260228.1604"></script>
+  <script src="assets/js/main.js?v=20260304.1"></script>
 </body>
 </html>

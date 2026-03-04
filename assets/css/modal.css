@@ -209,6 +209,71 @@
   border-color: #10223d;
 }
 
+.pix-modal {
+  display: grid;
+  gap: 12px;
+}
+
+.pix-modal-grid {
+  display: grid;
+  grid-template-columns: minmax(200px, 280px) minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.pix-modal-preview {
+  margin: 0;
+  padding: 10px;
+  border-radius: 16px;
+  border: 1px solid rgba(16, 34, 61, 0.14);
+  background: #f4f8ff;
+}
+
+.pix-modal-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.pix-copy-box {
+  display: grid;
+  gap: 10px;
+}
+
+.pix-copy-box label {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #3b4f6d;
+}
+
+.pix-copy-box textarea {
+  width: 100%;
+  min-height: 124px;
+  resize: vertical;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(16, 34, 61, 0.24);
+  background: #f8fbff;
+  color: #0c1a2d;
+  font-family: "Sora", sans-serif;
+  font-size: 0.83rem;
+  line-height: 1.5;
+}
+
+.pix-copy-btn {
+  width: fit-content;
+}
+
+.pix-copy-btn.is-copied {
+  filter: brightness(0.93);
+}
+
+.pix-copy-box small {
+  color: #4d5a71;
+}
+
 .social-icon {
   width: 18px;
   height: 18px;
@@ -242,6 +307,14 @@
 
   .history-archive {
     grid-template-columns: 1fr;
+  }
+
+  .pix-modal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pix-modal-preview {
+    max-width: 300px;
   }
 }
 

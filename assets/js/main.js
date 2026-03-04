@@ -208,6 +208,47 @@ if (overlay) {
   });
 }
 
+document.addEventListener("click", async (event) => {
+  const copyButton = event.target.closest("[data-copy-source]");
+  if (!copyButton) return;
+
+  const sourceId = copyButton.getAttribute("data-copy-source");
+  if (!sourceId) return;
+
+  const sourceField = document.getElementById(sourceId);
+  if (!sourceField) return;
+
+  const textToCopy = sourceField.value || sourceField.textContent || "";
+  if (!textToCopy) return;
+
+  const originalLabel = copyButton.textContent || "Copiar";
+  const copiedLabel = "Código Pix copiado";
+
+  const markCopied = () => {
+    copyButton.textContent = copiedLabel;
+    copyButton.classList.add("is-copied");
+    window.setTimeout(() => {
+      copyButton.textContent = originalLabel;
+      copyButton.classList.remove("is-copied");
+    }, 1900);
+  };
+
+  try {
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(textToCopy);
+      markCopied();
+      return;
+    }
+  } catch {
+    // Use fallback below
+  }
+
+  sourceField.focus();
+  if (typeof sourceField.select === "function") sourceField.select();
+  document.execCommand("copy");
+  markCopied();
+});
+
 window.addEventListener("keydown", (event) => {
   if (overlay && event.key === "Escape" && overlay.classList.contains("open")) {
     closeModal();
